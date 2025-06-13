@@ -19,27 +19,27 @@
 
     <form action="${pageContext.request.contextPath}/supplier/${action}" method="post" class="row g-3">
         <c:if test="${action eq 'update'}">
-            <input type="hidden" name="supplierId" value="${supplier.supplierId}" />
+            <input type="hidden" name="supplierId" value="${supplier.getId()}" />
         </c:if>
 
         <div class="col-md-6">
             <label for="name" class="form-label">Nome</label>
-            <input type="text" class="form-control" name="name" id="name" value="${supplier.name}" required>
+            <input type="text" class="form-control" name="name" id="name" value="${supplier.getName()}" required>
         </div>
 
         <div class="col-md-6">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" name="email" id="email" value="${supplier.email}" required>
+            <input type="email" class="form-control" name="email" id="email" value="${supplier.getEmail()}" required>
         </div>
 
         <div class="col-md-6">
             <label for="phone" class="form-label">Telefone</label>
-            <input type="text" class="form-control" name="phone" id="phone" value="${supplier.phone}" required>
+            <input type="text" class="form-control" name="phone" id="phone" value="${supplier.getPhone()}" required>
         </div>
 
         <div class="col-md-6">
             <label for="address" class="form-label">Endereço</label>
-            <input type="text" class="form-control" name="address" id="address" value="${supplier.address}" required>
+            <input type="text" class="form-control" name="address" id="address" value="${supplier.getAddress()}" required>
         </div>
 
 		<div class="col-md-6">
